@@ -1,0 +1,16 @@
+{
+	"name": "Yschiff",
+	"version": "0.0.1",
+	"private": true,
+	"description": "Twitter's stream analyzer",
+	"scripts": {
+		"start": "node app.js"
+	},
+	"dependencies": {
+		"express": "4.8.3",
+		"swig": "1.3.2",
+		"socket.io": "1.0.6",
+		"twit": "1.1.18",
+		"serve-favicon": "2.0.1"
+	}
+}

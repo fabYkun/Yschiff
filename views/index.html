@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html ng-app="YschiffApp">
+	<head>
+		<title>{[main]}</title>
+		<link rel="icon" type="image/png" href="/images/favicon/favicon-196x196.png" sizes="196x196">
+		<link rel="icon" type="image/png" href="/images/favicon/favicon-160x160.png" sizes="160x160">
+		<link rel="icon" type="image/png" href="/images/favicon/favicon-96x96.png" sizes="96x96">
+		<link rel="icon" type="image/png" href="/images/favicon/favicon-16x16.png" sizes="16x16">
+		<link rel="icon" type="image/png" href="/images/favicon/favicon-32x32.png" sizes="32x32">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="msapplication-TileImage" content="/images/favicon/mstile-144x144.png">
+		<script src="/js/libraries/angular.min.js"></script>
+	</head>
+	<body ng-controller="YschiffCtrl" ng-cloak>
+		<span ng-click="switchStreamStatus()">{{streamStatus}}</span>
+		<div id="precious" style="background-color: #2222bb; color: white">
+			<p ng-repeat="logs in targetLogs">
+				{{logs.text}}
+			</p>
+		</div>
+		<div id="stream" style="background-color: #bb2222">
+			<p ng-repeat="logs in normalLogs">
+				{{logs.text}}
+			</p>
+		</div>
+		<script src="/js/libraries/socket.io.js"></script>
+		<script src="/js/angular/services/webSocket.js"></script>
+		<script src="/js/angular/services/Yschiff.js"></script>
+		<script src="/js/angular/Yschiff.js"></script>
+	</body>
+</html>
